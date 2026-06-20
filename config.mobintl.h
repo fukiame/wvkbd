@@ -2,7 +2,6 @@
 #define config_h_INCLUDED
 
 #define DEFAULT_FONT "Sans 14"
-#define DEFAULT_ROUNDING 5
 #define SHIFT_SPACE_IS_TAB
 static const int transparency = 255;
 
@@ -17,7 +16,7 @@ struct clr_scheme schemes[] = {
   .text_press = {.color = UINT32_MAX},
   .text_swipe = {.color = UINT32_MAX},
   .font = DEFAULT_FONT,
-  .rounding = DEFAULT_ROUNDING,
+  .rounding = 5,
 },
 {
   /* colors */
@@ -29,7 +28,7 @@ struct clr_scheme schemes[] = {
   .text_swipe = {.color = UINT32_MAX},
   .text = {.color = UINT32_MAX},
   .font = DEFAULT_FONT,
-  .rounding = DEFAULT_ROUNDING,
+  .rounding = 5,
 }
 };
 
