@@ -57,7 +57,6 @@ struct clr_scheme {
 	Color text_press;
 	Color text_swipe;
 	char *font;
-	int rounding;
 	PangoFontDescription *font_description;
 };
 
@@ -127,9 +126,9 @@ struct kbd {
 };
 
 void draw_inset(struct drwsurf *ds, uint32_t x, uint32_t y, uint32_t width,
-                uint32_t height, uint32_t border, Color color, int rounding);
+                uint32_t height, uint32_t border, Color color);
 void draw_over_inset(struct drwsurf *ds, uint32_t x, uint32_t y, uint32_t width,
-                     uint32_t height, uint32_t border, Color color, int rounding);
+                     uint32_t height, uint32_t border, Color color);
 
 void kbd_init(struct kbd *kb, struct layout *layouts,
               char *layer_names_list, char *landscape_layer_names_list);

@@ -16,7 +16,6 @@ struct clr_scheme schemes[] = {
   .text_press = {.color = UINT32_MAX},
   .text_swipe = {.color = UINT32_MAX},
   .font = DEFAULT_FONT,
-  .rounding = 5,
 },
 {
   /* colors */
@@ -28,7 +27,6 @@ struct clr_scheme schemes[] = {
   .text_swipe = {.color = UINT32_MAX},
   .text = {.color = UINT32_MAX},
   .font = DEFAULT_FONT,
-  .rounding = 5,
 }
 };
 
