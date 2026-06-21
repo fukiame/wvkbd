@@ -119,6 +119,7 @@ static void layer_surface_configure(void *data,
 static void layer_surface_closed(void *data,
                                  struct zwlr_layer_surface_v1 *surface);
 static void redimension_keyboard();
+static void toggle_visibility();
 static void show();
 static void hide();
 
@@ -238,7 +239,10 @@ wl_touch_down(void *data, struct wl_touch *wl_touch, uint32_t serial,
 
     next_key = kbd_get_key(&keyboard, touch_x, touch_y);
     if (next_key) {
-        kbd_press_key(&keyboard, next_key, time);
+        if (next_key->type == Hide)
+            toggle_visibility();
+        else
+            kbd_press_key(&keyboard, next_key, time);
     } else if (keyboard.compose) {
         keyboard.compose = 0;
         kbd_switch_layout(&keyboard, keyboard.prevlayout,

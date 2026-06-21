@@ -236,7 +236,8 @@ static struct key keys_full[] = {
   {"⌨͕", "⌨͔", 1.5, NextLayer, .scheme = 1},
   {"Cmp", "Cmp", 1.0, Compose, .scheme = 1},
   {",", "'", 1.0, Code, KEY_COMMA, &layouts[ComposeMath]},
-  {"", "Tab", 4.0, Code, KEY_SPACE},
+  {"", "Tab", 3.0, Code, KEY_SPACE},
+  {"×", "×", 1.0, Hide},
   {".", "?", 1.0, Code, KEY_DOT, &layouts[ComposePunctuation]},
   {"Enter", "Enter", 1.5, Code, KEY_ENTER, .scheme = 1},
 
@@ -310,7 +311,8 @@ static struct key keys_full_wide[] = {
   {"⌨͕", "⌨͔", 1.5, NextLayer, .scheme = 1},
   {"Cmp", "Cmp", 1.0, Compose, .scheme = 1},
   {",", "'", 1.0, Code, KEY_COMMA, &layouts[ComposeMath]},
-  {"", "Tab", 4.0, Code, KEY_SPACE},
+  {"", "Tab", 3.0, Code, KEY_SPACE},
+  {"×", "×", 1.0, Hide},
   {".", "?", 1.0, Code, KEY_DOT, &layouts[ComposePunctuation]},
   {"Enter", "Enter", 1.5, Code, KEY_ENTER, .scheme = 1},
 
