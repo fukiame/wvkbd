@@ -240,7 +240,7 @@ wl_touch_down(void *data, struct wl_touch *wl_touch, uint32_t serial,
     next_key = kbd_get_key(&keyboard, touch_x, touch_y);
     if (next_key) {
         if (next_key->type == Hide)
-            toggle_visibility();
+            exit(0);
         else
             kbd_press_key(&keyboard, next_key, time);
     } else if (keyboard.compose) {
