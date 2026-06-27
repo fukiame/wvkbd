@@ -173,18 +173,31 @@ static struct layout layouts[NumLayouts] = {
  * - layout: layout to switch to when key is pressed
  */
 static struct key keys_full[] = {
-  {"Esc", "Esc", 1.0, Code, KEY_ESC, .scheme = 1},
-  {"Ctr", "Ctr", 1.0, Mod, Ctrl, .scheme = 1},
-  {"↑", "↑", 1.0, Code, KEY_UP, .scheme = 1},
-  {"↓", "↓", 1.0, Code, KEY_DOWN, .scheme = 1},
-  {"←", "←", 1.0, Code, KEY_LEFT, .scheme = 1},
-  {"→", "→", 1.0, Code, KEY_RIGHT, .scheme = 1},
-  {"'", "\"", 1.0, Code, KEY_APOSTROPHE, &layouts[ComposeBracket] },
-  {"-", "_", 1.0, Code, KEY_MINUS, &layouts[ComposeMath] },
-  {"/", ">", 1.0, Code, KEY_SLASH,  &layouts[ComposePunctuation] },
   {"Tab", "Tab", 1.0, Code, KEY_TAB, .scheme = 1},
+  {"Esc", "Esc", 1.0, Code, KEY_ESC, .scheme = 1},
+  {"Del", "Del", 1.0, Code, KEY_DELETE, .scheme = 1},
+  {"-", "_", 1.0, Code, KEY_MINUS, &layouts[ComposeMath] },
+  {"=", "+", 1.0, Code, KEY_EQUAL, &layouts[ComposeMath] },
+  {"/", ">", 1.0, Code, KEY_SLASH,  &layouts[ComposePunctuation] },
+  {"Ctr", "Ctr", 1.0, Mod, Ctrl, .scheme = 1},
+  {"⇈", "⇈", 1.0, Code, KEY_PAGEUP, .scheme = 1},
+  {"⇊", "⇊", 1.0, Code, KEY_PAGEDOWN, .scheme = 1},
+  {":", ";", 1, Code, KEY_SEMICOLON, 0, Shift},
   {"", "", 0.0, EndRow},
 
+  {"Cmp", "Cmp", 1.0, Compose, .scheme = 1},
+  {"CpL", "CpL", 1.0, Mod, CapsLock, .scheme = 1},
+  {"Sup", "Sup", 1.0, Mod, Super, .scheme = 1},
+  {"Hid", "Hid", 1.0, Hide},
+  {"\\", "|", 1.0, Code, KEY_BACKSLASH},
+  {"←", "←", 1.0, Code, KEY_LEFT, .scheme = 1},
+  {"↓", "↓", 1.0, Code, KEY_DOWN, .scheme = 1},
+  {"↑", "↑", 1.0, Code, KEY_UP, .scheme = 1},
+  {"→", "→", 1.0, Code, KEY_RIGHT, .scheme = 1},
+  {"'", "\"", 1.0, Code, KEY_APOSTROPHE, &layouts[ComposeBracket] },
+  {"", "", 0.0, EndRow},
+
+  /*
   {"1", "!", 1.0, Code, KEY_1},
   {"2", "@", 1.0, Code, KEY_2},
   {"3", "#", 1.0, Code, KEY_3},
@@ -196,6 +209,7 @@ static struct key keys_full[] = {
   {"9", "(", 1.0, Code, KEY_9, &layouts[ComposeBracket]},
   {"0", ")", 1.0, Code, KEY_0, &layouts[ComposeBracket]},
   {"", "", 0.0, EndRow},
+  */
 
   {"q", "Q", 1.0, Code, KEY_Q, &layouts[Emoji]},
   {"w", "W", 1.0, Code, KEY_W, &layouts[ComposeW]},
@@ -234,10 +248,8 @@ static struct key keys_full[] = {
   {"", "", 0.0, EndRow},
 
   {"⌨͕", "⌨͔", 1.5, NextLayer, .scheme = 1},
-  {"Cmp", "Cmp", 1.0, Compose, .scheme = 1},
   {",", "'", 1.0, Code, KEY_COMMA, &layouts[ComposeMath]},
-  {"", "Tab", 3.0, Code, KEY_SPACE},
-  {"×", "×", 1.0, Hide},
+  {"", "Tab", 4.0, Code, KEY_SPACE},
   {".", "?", 1.0, Code, KEY_DOT, &layouts[ComposePunctuation]},
   {"Enter", "Enter", 1.5, Code, KEY_ENTER, .scheme = 1},
 
